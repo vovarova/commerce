@@ -133,3 +133,9 @@ UPDATE RandomImageParagraphComponent;$contentCV[unique=true];uid[unique=true];te
 ;;RandomImage1;Fashion
 ;;RandomImage2;People
 ;;RandomImage3;Life Style
+
+INSERT_UPDATE Media;$contentCV[unique=true];code[unique=true];@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator];mime[default='image/jpg'];altText
+;;Merch_450x290_HybridsBanner_EN_02.jpg;$siteResource/images/banners/site/Merch_450x290_HybridsBanner_EN_02.jpg;;"Not a hybrid yet?"
+
+UPDATE SimpleBannerComponent;$contentCV[unique=true];uid[unique=true];$picture[lang=en]
+;;HybridsBanner;Merch_450x290_HybridsBanner_EN_02.jpg

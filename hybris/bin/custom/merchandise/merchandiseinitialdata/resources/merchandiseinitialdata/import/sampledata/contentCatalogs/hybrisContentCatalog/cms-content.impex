@@ -547,3 +547,13 @@ INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];name;active;c
 ;;Section2ASlot-Homepage;Section2A Slot for Homepage;true;RandomImage1
 ;;Section2BSlot-Homepage;Section2B Slot for Homepage;true;RandomImage2
 ;;Section2CSlot-Homepage;Section2C Slot for Homepage;true;RandomImage3
+
+###### Hybrids BTG Banner
+INSERT_UPDATE SimpleBannerComponent;$contentCV[unique=true];uid[unique=true];name;&componentRef;urlLink
+;;HybridsBanner;Hybrids Banner;HybridsBanner;
+
+INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];name;active;cmsComponents(&componentRef)
+;;SideContent-CheckoutSummary;Side Slot for checkoutSummaryPages;true;HybridsBanner
+ 
+INSERT_UPDATE ContentSlotForPage;$contentCV[unique=true];uid[unique=true];position[unique=true];page(uid,$contentCV)[unique=true][default='multiStepCheckoutSummaryPage'];contentSlot(uid,$contentCV)[unique=true]
+;;Side-CheckoutSummary;SideContent;;SideContent-CheckoutSummary

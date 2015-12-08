@@ -41,6 +41,13 @@
 
 		<!-- Add your item definitions here -->
 
+		<typegroup name="BTG">
+			<itemtype code="BTGCustomerInternalFlagOperand" extends="BTGAbstractCustomerOperand" autocreate="true" generate="true"
+				jaloclass="de.hybris.merchandise.core.jalo.BTGCustomerInternalFlagOperand">
+			</itemtype>
+		</typegroup>
+	
+
 
 		<!-- TypeGroups are for structure of this file only -->
 
