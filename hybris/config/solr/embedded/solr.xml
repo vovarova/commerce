@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<solr persistent="true" sharedLib="hybris">
+  <cores adminPath="/admin/cores">
+    <core name="master_hybris_Product" instanceDir="C:\Hybris_project\commerce\hybris\config/solr/embedded" dataDir="C:\Hybris_project\commerce\hybris\data\solrfacetsearch\MASTER\hybris_Product"/>
+
+    <core name="master_hybris_Product_1" instanceDir="C:\Hybris_project\commerce\hybris\config/solr/embedded" dataDir="C:\Hybris_project\commerce\hybris\data\solrfacetsearch\MASTER\hybris_Product_1"/>
+</cores>
+</solr>
