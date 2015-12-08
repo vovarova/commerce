@@ -1,8 +1,27 @@
 # ImpEx for Points of Service
 
 # Macros / Replacement Parameter definitions
-$storeUid=__STORE_UID__
+#$storeUid=__STORE_UID__
 $productCatalog=__PRODUCT_CATALOG_NAME__
+
+$storeUid=hybris
+ 
+$gliwiceLatitude=50.29230
+$gliwiceLongitude=18.66104
+$munchenLatitude=48.14434
+$munchenLongitude=11.55071
+ 
+INSERT_UPDATE PointOfService;name[unique=true];type(code);address(&addrID);latitude;longitude;geocodeTimestamp[dateformat=dd-MM-yyyy];basestore(uid);warehouses(code);
+;hybris Gliwice;STORE;addr1001;$gliwiceLatitude;$gliwiceLongitude;29-04-2011;$storeUid;warehouse_c;
+;hybris Munchen;STORE;addr1002;$munchenLatitude;$munchenLongitude;29-04-2011;$storeUid;warehouse_c;
+ 
+INSERT_UPDATE Address;&addrID;streetname;streetnumber;postalcode[unique=true];town[unique=true];country(isocode);region(isocode);phone1;owner(PointOfService.name)[unique=true]
+;addr1001;Zygmunta Starego;11;44-100;Gliwice;PL;;;hybris Gliwice;
+;addr1002;Nymphenburger Str;86;80636;Munchen;DE;;;hybris Munchen;
+
+
+
+
 
 $catalogVersion=catalogversion(catalog(id[default=$productCatalog]),version[default='Staged'])[unique=true,default=$productCatalog:Staged]
 $storeImage=storeImage(qualifier, $catalogVersion)
