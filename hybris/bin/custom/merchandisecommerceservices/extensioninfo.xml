@@ -1,0 +1,19 @@
+<extensioninfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="extensioninfo.xsd">
+ 
+   <extension  name="merchandisecommerceservices"
+               abstractclassprefix="Generated"
+               classprefix="Merchandisecommerceservices"
+               managername="MerchandisecommerceservicesManager"
+               managersuperclass="de.hybris.platform.jalo.extension.Extension"
+               >
+ 
+      <requires-extension name="commerceservices"/>
+ 
+ 
+      <coremodule packageroot="de.hybris.merchandise"
+                  manager="de.hybris.merchandise.jalo.MerchandisecommerceservicesManager"
+                  generated="true" />
+ 
+   </extension>
+ 
+</extensioninfo>
