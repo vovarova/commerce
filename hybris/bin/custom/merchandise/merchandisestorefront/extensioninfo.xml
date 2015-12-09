@@ -13,7 +13,8 @@
 --><extensioninfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="extensioninfo.xsd">
 
 	<extension abstractclassprefix="Generated" classprefix="MerchandiseStorefront" name="merchandisestorefront">
-		<requires-extension name="randomimageaddon"/>
+		<requires-extension name="merchandisecheckoutaddon"/>
+<requires-extension name="randomimageaddon"/>
 <requires-extension name="b2ccheckoutaddon"/>
 		<requires-extension name="btg"/>
 		<requires-extension name="acceleratorstorefrontcommons"/>

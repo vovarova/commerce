@@ -86,6 +86,7 @@
 		<extension name="merchandisefacades"/>
 		<extension name="merchandisecockpits"/>
       <extension name="merchandisecommerceservices"/>      
-      <extension name="randomimageaddon" />     
+      <extension name="randomimageaddon" />
+      <extension name="merchandisecheckoutaddon" />     
     </extensions>
 </hybrisconfig>
