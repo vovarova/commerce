@@ -3,6 +3,7 @@
 #
 $regulargroup=regulargroup
 $customergroup=customergroup
+$hybridsgroup=hybrids
 
 $passwordEncoding=md5
 $defaultPassword=12341234
@@ -10,7 +11,8 @@ $setPassword=@password[translator=de.hybris.platform.impex.jalo.translators.Conv
 
 # Create Customer Group
 INSERT_UPDATE Usergroup;uid[unique=true];groups(uid)[mode=append]
-;$regulargroup;customergroup
+;$regulargroup;$customergroup
+;$hybridsgroup;$customergroup
 
 # Customers
 INSERT_UPDATE Customer;originalUid[unique=true];uid[unique=true];title(code);name;description;sessionLanguage(isocode);sessionCurrency(isocode);groups(uid);$setPassword;&userId;defaultPaymentAddress(&addId);defaultShipmentAddress(&addId)

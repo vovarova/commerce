@@ -79,7 +79,14 @@
 	      	            !execution(* getPK(..))" />  	            
 	       <aop:pointcut id="profiledMethods" expression="execution(* *(..))" />	
 	  -->
-	
+    <bean id="hybridCustomersPrepareInterceptor" class="de.hybris.merchandise.servicelayer.interceptor.HybridsCustomersPrepareInterceptor">
+        <property name="userGroupDao" ref="userGroupDao"/>
+    </bean>
+ 
+    <bean id="hybridCustomersPrepareInterceptorMapping" class="de.hybris.platform.servicelayer.interceptor.impl.InterceptorMapping">
+        <property name="interceptor" ref="hybridCustomersPrepareInterceptor"/>
+        <property name="typeCode" value="Customer"/>
+    </bean>
 			
 			
 </beans>

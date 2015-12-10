@@ -20,5 +20,6 @@
 	<classpathentry kind="src" path="web/src"/>
 	<classpathentry kind="src" path="web/testsrc"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/randomimageaddon"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/merchandisecommerceservices"/>
 	<classpathentry kind="output" path="web/webroot/WEB-INF/classes"/>
 </classpath>

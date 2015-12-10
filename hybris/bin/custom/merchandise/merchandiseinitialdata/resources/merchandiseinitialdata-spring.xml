@@ -25,4 +25,8 @@
 		<property name="sampleDataImportService" ref="sampleDataImportService"/>
 	</bean>
 
+  <alias name="merchandiseDataImportService" alias="sampleDataImportService" />
+    <bean id="merchandiseDataImportService"
+        class="de.hybris.merchandise.initialdata.dataimport.impl.MerchandiseDataImportService"
+        parent="defaultSampleDataImportService" />
 </beans>

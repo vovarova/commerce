@@ -1,0 +1,41 @@
+# ImpEx for Importing Prices groups into Merchandise Store
+#% impex.setLocale( Locale.GERMAN );
+ 
+# Macros / Replacement Parameter definitions
+$productCatalog=hybrisProductCatalog
+$catalogVersion=catalogversion(catalog(id[default=$productCatalog]),version[default='Staged'])[unique=true,default=$productCatalog:Staged]
+$product=product(code,$catalogVersion)[unique=true]
+$currency=currency(isocode)[unique=true]
+$ug=ug(code[default=hybridsPriceGroup])[unique=true]
+$minqtd=minqtd[default=1]
+$unitFactor=unitFactor[default=1]
+$unit=unit(code[default=pieces])
+ 
+ 
+INSERT_UPDATE UserPriceGroup;code[unique=true];
+;hybridsPriceGroup;
+ 
+UPDATE Usergroup;uid[unique=true];userPriceGroup(code)
+;hybrids;hybridsPriceGroup
+ 
+INSERT_UPDATE PriceRow;$product;price;$currency;$ug;$minqtd;$unitFactor;$catalogVersion;$unit
+;0001;3,50;EUR;
+;0002;1,50;EUR;
+;0003;4;EUR;
+;0004;8,50;EUR;
+;0005;7,50;EUR;
+;0006;18;EUR;
+;0100;18;EUR;
+;0101;18;EUR;
+;0102;18;EUR;
+;0110;18;EUR;
+;0111;18;EUR;
+;0112;18;EUR;
+;0200;25;EUR;
+;0201;25;EUR;
+;0202;25;EUR;
+;0210;25;EUR;
+;0211;25;EUR;
+;0212;25;EUR;
+ 
+# TASK : Define Lower prices for other currencies supported by the hybris merchandise store!
