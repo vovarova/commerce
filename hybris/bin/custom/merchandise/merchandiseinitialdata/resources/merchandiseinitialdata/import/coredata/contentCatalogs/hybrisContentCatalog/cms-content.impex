@@ -740,3 +740,4 @@ INSERT_UPDATE ContentSlotName;name[unique=true];template(uid,$contentCV)[unique=
 ;Section2A;;RandomImageParagraphComponent;narrow
 ;Section2B;;RandomImageParagraphComponent;narrow
 ;Section2C;;RandomImageParagraphComponent;wide
+

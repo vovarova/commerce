@@ -211,5 +211,12 @@
         <property name="list" ref="customerConverter"/>
         <property name="add"  ref="customerInternalPopulator"/>
     </bean>
+    
+    <bean id="orderHistoryCancellableFlagPopulator" class="de.hybris.merchandise.facades.populators.OrderHistoryCancellableFlagPopulator"/>
+ 
+    <bean parent="modifyPopulatorList">
+        <property name="list" ref="orderHistoryConverter"/>
+        <property name="add"  ref="orderHistoryCancellableFlagPopulator"/>
+    </bean>
 	
 </beans>

@@ -25,5 +25,8 @@
 	<bean class="de.hybris.platform.commercefacades.user.data.CustomerData">
         <property name="internal" type="boolean"/>
     </bean>
-
+	
+	<bean class="de.hybris.platform.commercefacades.order.data.OrderHistoryData">
+        <property name="cancellable" type="boolean"/>
+    </bean>
 </beans>
