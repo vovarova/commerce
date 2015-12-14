@@ -94,5 +94,6 @@
 		<property name="eventService" ref="eventService"/>
 	</bean>
 
+	<bean id="waitForImmediateCancel" class="de.hybris.merchandise.fulfilmentprocess.actions.order.WaitForImmediateCancel" parent="abstractAction"/>
 
 </beans>

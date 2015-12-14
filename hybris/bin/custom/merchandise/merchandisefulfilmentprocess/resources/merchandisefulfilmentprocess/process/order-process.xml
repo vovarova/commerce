@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<process xmlns="http://www.hybris.de/xsd/processdefinition" start="checkOrder" name="order-process" processClass="de.hybris.platform.orderprocessing.model.OrderProcessModel">
-
+<process xmlns="http://www.hybris.de/xsd/processdefinition" start="waitForImmediateCancel" name="order-process" processClass="de.hybris.platform.orderprocessing.model.OrderProcessModel">
+ 
+    <action id="waitForImmediateCancel" bean="waitForImmediateCancel">
+        <transition name="OK" to="checkOrder"/>
+        <transition name="NOK" to="waitForImmediateCancel"/>
+        <transition name="CANCELLED" to="failed"/>
+    </action>
+    
 	<action id="checkOrder" bean="checkOrderAction">
 		<transition name="OK" to="checkAuthorizeOrderPayment"/>
 		<transition name="NOK" to="error"/>
